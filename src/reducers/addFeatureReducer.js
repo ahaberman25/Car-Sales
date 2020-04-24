@@ -22,7 +22,7 @@ export const initialState = {
             return {...state,
                 additionalPrice: state.additionalPrice + action.payload.price,
                 car: {...state.car, features: [...state.car.features, action.payload]},
-                additionalFeatures: state.additionalFeatures.filter((event) => event.id !== action.payload.id)
+                additionalFeatures: state.additionalFeatures.filter((item) => item.id !== action.payload.id)
         }
         case "REMOVE_FEATURE":
             return{
